@@ -135,7 +135,7 @@ O site está hospedado no **Netlify** com deploy contínuo: cada `git push` na b
 
 ## 👨‍💻 Desenvolvimento
 
-Projeto desenvolvido por **[Lucas Reppetto](https://github.com/LucasReppetto010)**, do levantamento da marca do cliente à página no ar: estratégia de conversão, design, desenvolvimento front-end, tratamento e vetorização de marcas, responsividade e deploy.
+Projeto desenvolvido por **[Lucas Reppetto](https://github.com/lucasreppetto010-cpu)**, do levantamento da marca do cliente à página no ar: estratégia de conversão, design, desenvolvimento front-end, tratamento e vetorização de marcas, responsividade e deploy.
 
 > Textos, marcas, fotos e o conteúdo do livro pertencem a Juan Feijo / Método Feijo.
 > O código é apresentado aqui como portfólio.
