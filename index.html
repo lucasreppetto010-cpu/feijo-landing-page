@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!--
+  FEIJ∞ — LANDING PAGE
+  Estrutura:
+    index.html      → conteúdo e textos do site (este arquivo)
+    css/style.css   → visual (cores, tamanhos, layout, celular)
+    js/config.js    → WhatsApp, produtos, depoimentos  ← edite aqui no dia a dia
+    js/main.js      → carrinho, checkout e animações
+    img/            → fotos (veja os nomes indicados em cada seção)
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juan Feijo · Método Feijo</title>
+<meta name="description" content="Feijo, mentor y autor de «Un Método para Prosperar». Mentoría, libro y seminarios para reprogramar tu mente y prosperar.">
+<meta property="og:title" content="Feijo · Método Feijo">
+<meta property="og:description" content="Prosperar es crecer. La mentoría, el libro y los seminarios del Método Feijo.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="theme-color" content="#0E0B0B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ==========================================================================
+     FAIXA DE OFERTA (topo)
+     .tb-long = texto no computador · .tb-short = texto no celular
+     ========================================================================== -->
+<div class="topbar"><span class="tb-long">🔥 Nuevo: <b>CVV Mentoría con Feijo</b> — llevala en combo con el libro</span><span class="tb-short">🔥 <b>Combo Libro + Mentoría</b></span></div>
+
+<!-- ==========================================================================
+     MENU FIXO
+     Logo, links das seções e botão do carrinho
+     ========================================================================== -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo" aria-label="Feijo inicio"><span class="logo-mark">MF</span><span class="logo-name">Feij<span class="inf">∞</span></span></a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#sobre">Sobre Feijo</a>
+      <a href="#libro">El Libro</a>
+      <a href="#mentoria">Mentoría</a>
+      <a href="#conferencias">Conferencias</a>
+      <a href="#productos">Comprar</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#mentoria" class="btn btn-primary">Quiero la mentoría</a>
+      <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ==========================================================================
+     1. HERO — primeira dobra
+     Foto principal: img/juan-feijo.png (foto da contracapa do livro)
+     ========================================================================== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">#MétodoFeijo · Mentor · Autor · Speaker</span>
+      <h1 class="h-display">
+        <span class="line">Prosperar</span>
+        <span class="line outline">es</span>
+        <span class="line gold">crecer.</span>
+      </h1>
+      <p class="lead">Soy <strong>Juan Feijo</strong>, empresario y mentor. En <strong>“Un Método para Prosperar”</strong> te entrego el método que uso para crecer en los negocios y en la vida. Y en la <strong>mentoría</strong>, lo activamos juntos para que des tu próximo gran salto.</p>
+      <div class="hero-ctas">
+        <a href="#mentoria" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+          Quiero la mentoría
+        </a>
+        <a href="#productos" class="btn btn-ghost">Ver combo Libro + Mentoría →</a>
+      </div>
+      <div class="proof">
+        <div class="proof-item"><b>4</b><span>Pasos para prosperar</span></div>
+        <div class="proof-sep"></div>
+        <div class="proof-item"><b>3</b><span>Espíritu · Alma · Cuerpo</span></div>
+        <div class="proof-sep"></div>
+        <div class="proof-item"><b>1</b><span>Método probado</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="portrait">
+        <img src="img/juan-feijo.png" alt="Feijo" onerror="this.remove()">
+      </div>
+      <div class="hero-tag">
+        <q>Prosperar es crecer. Y el cambio es la ley del crecimiento.</q>
+        <small>— Feijo</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     FAIXA AMARELA ANIMADA
+     As frases estão repetidas 2x de propósito (para a animação não ter "buraco")
+     ========================================================================== -->
+<div class="marquee-wrap"><div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Prosperar es crecer</span><span>Rompé la inercia</span><span>Reprogramá tu mente</span><span>Repudiá lo que te limita</span><span>Lo que sembrás, cosechás</span><span>No es mañana, es ahora</span>
+    <span>Prosperar es crecer</span><span>Rompé la inercia</span><span>Reprogramá tu mente</span><span>Repudiá lo que te limita</span><span>Lo que sembrás, cosechás</span><span>No es mañana, es ahora</span>
+  </div>
+</div></div>
+
+<!-- ==========================================================================
+     2. SOBRE FEIJ∞
+     Fotos: img/juan-1.jpg, img/juan-2.jpg, img/juan-3.jpg
+     ========================================================================== -->
+<section class="sec about" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-photos rv">
+      <div class="ph-box"><img src="img/juan-1.jpg" alt="Feijo" onerror="this.remove()"></div>
+      <div class="ph-box"><img src="img/juan-2.jpg" alt="Feijo con micrófono en un encuentro" onerror="this.remove()"></div>
+      <div class="ph-box"><img src="img/juan-3.jpg" alt="Lectores con el libro Un Método para Prosperar" onerror="this.remove()"></div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Quién es Feijo</span>
+      <h2 class="h-display">No vine a motivarte. Vine a activarte.</h2>
+      <p>Soy Feijo, empresario, mentor y creador del <strong>Método Feijo</strong>. Construí empresas desde cero en la industria forestal y llegué a liderar equipos que sostenían a <strong>más de cien familias</strong>. Sé lo que es decidir en grande, con presión y sin red.</p>
+      <p>En ese camino descubrí lo que cambia todo: <strong>el techo de tus resultados es tu mentalidad</strong>. Por eso escribí <strong>Un Método para Prosperar</strong>: los códigos prácticos para reprogramar tu mente y crecer en tus finanzas, en tus negocios y en tu vida.</p>
+      <p>Hoy mi misión es multiplicar: llevar este método a miles de personas con el libro, la mentoría y los seminarios. Y si caminás conmigo, voy a estar con vos en cada paso hacia tu próximo nivel.</p>
+      <blockquote>“La prosperidad no es un privilegio de pocos. Es un derecho de quien decide actuar.”<cite>Feijo</cite></blockquote>
+      <div class="chips">
+        <span class="chip">Emprendedor</span><span class="chip">Autor</span><span class="chip">Speaker</span><span class="chip">Mentor de prosperidad</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     3. O LIVRO — o que você vai aprender
+     ========================================================================== -->
+<section class="sec deep" id="libro">
+  <div class="wrap deep-grid">
+    <div class="deep-book rv">
+      <div class="book">
+        <span class="b-top">Método Feijo</span>
+        <div class="b-title"><div class="b-un">Un</div><div class="b-met">Método</div><div class="b-para">para</div><div class="b-pros">Prosperar</div></div>
+        <div class="b-foot">Feijo</div>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">El libro</span>
+      <h2 class="h-display">Lo que vas a activar</h2>
+      <p class="intro"><strong>“Un Método para Prosperar”</strong> no es un libro para leer, es para vivir. Es el manual que uso para crecer en los negocios y en la vida, directo y sin vueltas. Adentro vas a encontrar ejercicios para desbloquear tu mente, porque después del desbloqueo viene la activación.</p>
+      <div class="learn">
+        <div class="learn-item"><div class="learn-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2Z"/></svg></div><div><h5>Reprogramá tu mente</h5><p>Identificá las creencias limitantes y reescribí el código, como se actualiza un software.</p></div></div>
+        <div class="learn-item"><div class="learn-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><div><h5>Mindset emprendedor</h5><p>Los cinco pilares para hacer del riesgo un aliado y de cada obstáculo una oportunidad.</p></div></div>
+        <div class="learn-item"><div class="learn-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div><div><h5>Prosperidad integral</h5><p>Espíritu, alma y cuerpo alineados. Prosperar es mucho más que dinero.</p></div></div>
+        <div class="learn-item"><div class="learn-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h5>Propósito y talentos</h5><p>No preguntes «¿por qué estoy acá?», sino «¿para qué?». Descubrí tus talentos y multiplicalos.</p></div></div>
+      </div>
+      <div class="deep-ctas">
+        <button class="btn btn-primary" data-add="libro">Comprar el libro</button>
+        <a href="#mentoria" class="btn btn-ghost">Activarlo con Feijo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     4. MENTORIA (produto principal)
+     Foto: img/mentoria.jpg · data-add="mentoria" adiciona ao carrinho
+     data-wa-mentor abre o WhatsApp com mensagem sobre a mentoria
+     ========================================================================== -->
+<section class="sec talks mentor" id="mentoria">
+  <div class="wrap talks-grid">
+    <div class="rv">
+      <div class="talk-photo full">
+        <img src="img/mentoria.jpg" alt="Feijo en una sesión de mentoría" onerror="this.remove()">
+      </div>
+    </div>
+
+    <div class="rv">
+      <span class="eyebrow">CVV Mentoría · Camino, Verdad y Vida</span>
+      <h2 class="h-display" style="font-size:clamp(2.4rem,5.4vw,4.2rem);margin:.8rem 0 1rem">El camino de la <span class="gold">transformación</span></h2>
+      <p style="color:var(--muted);font-size:1.06rem;margin-bottom:1.6rem">El libro te da los códigos. La mentoría los activa en tu vida. Es una jornada completa de crecimiento <strong style="color:var(--text)">personal, espiritual y financiero</strong>, conmigo a tu lado, para alinear tu propósito con tu prosperidad y formarte como un líder de impacto.</p>
+      <div class="formats">
+        <div class="format"><div class="f-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2Z"/></svg></div><div><h5>Reprogramación mental</h5><p>Rompemos las creencias que te frenan y construimos la base mental para liderar con confianza.</p></div></div>
+        <div class="format"><div class="f-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><div><h5>Propósito y talentos</h5><p>Descubrimos tus talentos, los ponemos al servicio de otros y los convertimos en valor.</p></div></div>
+        <div class="format"><div class="f-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div><div><h5>Espíritu, alma y cuerpo</h5><p>Una transformación real en todas las áreas: no solo en tus negocios, también en tu vida.</p></div></div>
+        <div class="format"><div class="f-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h5>Invitación a ser socio</h5><p>Al completar tu formación, recibís la oportunidad de sumarte a mi equipo como socio.</p></div></div>
+      </div>
+      <div class="deep-ctas">
+        <button class="btn btn-primary" data-add="mentoria">Quiero la mentoría</button>
+        <a href="#" class="btn btn-wa" data-wa-mentor><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3ZM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8Zm8.4-18.2A11.8 11.8 0 0 0 12 .1C5.5.1.2 5.4.2 11.9c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.3Z"/></svg>
+          Consultar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     5. CONFERÊNCIAS (palestra)
+     Foto: img/palestra-2.jpg · botões com data-wa-talk abrem o WhatsApp
+     ========================================================================== -->
+<section class="sec talks" id="conferencias">
+  <div class="wrap talks-grid">
+    <div class="rv">
+      <span class="eyebrow">Conferencias y seminarios</span>
+      <h2 class="h-display" style="font-size:clamp(2.4rem,5.4vw,4.2rem);margin:.8rem 0 1rem">Llevá a Feijo <span class="gold">a tu escenario</span></h2>
+      <p style="color:var(--muted);font-size:1.06rem;margin-bottom:1.6rem">Una experiencia que desafía paradigmas y enciende a tu equipo. Feijo comparte los códigos que usó para construir empresas y liderar equipos, y deja a tu gente con ganas de actuar y con las herramientas para hacerlo.</p>
+      <div class="formats">
+        <div class="format"><div class="f-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg></div><div><h5>Seminario Método Feijo</h5><p>Evento presencial de inmersión en desarrollo personal y emprendimiento. Llevalo a tu ciudad.</p></div></div>
+        <div class="format"><div class="f-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div><h5>Feijo Business Academy</h5><p>Feijo va a tu empresa a capacitar a tu equipo y llevar la organización al próximo nivel.</p></div></div>
+        <div class="format"><div class="f-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div><h5>Eventos e instituciones</h5><p>Conferencias sobre propósito, mindset emprendedor y prosperidad integral.</p></div></div>
+      </div>
+      <a href="#" class="btn btn-wa" data-wa-talk style="margin-top:1.6rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3ZM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8Zm8.4-18.2A11.8 11.8 0 0 0 12 .1C5.5.1.2 5.4.2 11.9c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.3Z"/></svg>
+        Hablar con Feijo por WhatsApp</a>
+    </div>
+
+    <div class="rv">
+      <div class="talk-photo full">
+        <img src="img/palestra-2.jpg" alt="Público en una conferencia de Feijo" onerror="this.remove()">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     6. PRODUTOS (itens disponíveis para compra)
+     Sem preços no site: o preço é confirmado pelo WhatsApp ao finalizar.
+     Botões com data-add="libro|mentoria|combo" adicionam ao carrinho
+     ========================================================================== -->
+<section class="sec products" id="productos">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">Elegí cómo empezar</span>
+      <h2 class="h-display">Llevate el método <span class="gold">a tu manera</span></h2>
+      <p>Leé los códigos, activalos con Feijo en la mentoría o llevá el método a tu equipo. Agregá al carrito y finalizá directo por WhatsApp: ahí te confirmamos el valor y la forma de pago.</p>
+    </div>
+
+    <div class="p-grid">
+      <!-- Card: LIVRO FÍSICO -->
+      <article class="card rv">
+        <span class="badge red">Para empezar</span>
+        <div class="card-visual">
+          <div class="book">
+            <span class="b-top">Método Feijo</span>
+            <div class="b-title"><div class="b-un">Un</div><div class="b-met">Método</div><div class="b-para">para</div><div class="b-pros">Prosperar</div></div>
+            <div class="b-foot">Feijo</div>
+          </div>
+        </div>
+        <span class="type">Libro físico</span>
+        <h3>Un Método para Prosperar</h3>
+        <p class="desc">El manual del Método Feijo: ejercicios para desbloquear tu mente y activar la prosperidad que ya está en vos.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Edición impresa</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Opción de dedicatoria personalizada</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Envío a todo el país</li>
+        </ul>
+        <div class="price-row"></div>
+        <button class="btn btn-primary" data-add="libro">Agregar al carrito</button>
+      </article>
+
+      <!-- Card: MENTORIA (destacado) — foto: img/mentoria-card.jpg -->
+      <article class="card featured rv">
+        <span class="badge">Recomendado</span>
+        <div class="card-visual">
+          <div class="stage">
+            <img src="img/mentoria-card.jpg" alt="Mentoría con Feijo" style="opacity:1" onerror="this.remove()">
+          </div>
+        </div>
+        <span class="type">Mentoría</span>
+        <h3>CVV Mentoría</h3>
+        <p class="desc">El camino de la transformación: crecimiento personal, espiritual y financiero, de la mano de Feijo.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reprogramación mental</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Propósito, talentos y negocios</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Oportunidad de ser socio de Feijo</li>
+        </ul>
+        <div class="price-row"></div>
+        <button class="btn btn-primary" data-add="mentoria">Quiero la mentoría</button>
+      </article>
+
+      <!-- Card: CONFERÊNCIAS (abre o WhatsApp) — foto: img/palestra.jpg -->
+      <article class="card rv">
+        <span class="badge">Empresas y eventos</span>
+        <div class="card-visual">
+          <div class="stage">
+            <img src="img/palestra.jpg" alt="Feijo dando una conferencia" onerror="this.remove()">
+            <div class="spot"></div>
+            <div class="mic">En vivo<small>Conferencias · Talleres</small></div>
+          </div>
+        </div>
+        <span class="type">Conferencias</span>
+        <h3>Feijo en tu evento</h3>
+        <p class="desc">Seminarios de inmersión y capacitaciones que desafían paradigmas y abren un nuevo nivel de acción.</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Seminario presencial en tu ciudad</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Capacitación para tu empresa</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Libros para los asistentes (opcional)</li>
+        </ul>
+        <div class="price-row"></div>
+        <a href="#" class="btn btn-gold" data-wa-talk>Quiero a Feijo en mi evento</a>
+      </article>
+    </div>
+
+    <!-- COMBO LIVRO + MENTORIA -->
+    <div class="bundle rv">
+      <div class="bundle-books" aria-hidden="true">
+        <div class="book"><span class="b-top">MF</span><div class="b-title"><div class="b-un">Un</div><div class="b-met">Método</div><div class="b-para">para</div><div class="b-pros">Prosperar</div></div></div>
+        <div class="mentor-tile"><img src="img/mentoria-combo.jpg" alt=""><span>Mentoría</span></div>
+      </div>
+      <div>
+        <span class="eyebrow" style="color:var(--gold-2)">La mejor opción</span>
+        <h3>Combo Prosperar: Libro + Mentoría</h3>
+        <p>Leé los códigos y activalos con Feijo a tu lado. Porque el conocimiento sin acción se disuelve.</p>
+      </div>
+      <div class="bundle-cta">
+        <button class="btn btn-gold" data-add="combo">Quiero el combo</button>
+      </div>
+    </div>
+
+    <div class="trust rv">
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3-3 6-3 9-3s6 0 9 3"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" opacity=".0"/><path d="M12 2a5 5 0 0 1 5 5c0 4-5 9-5 9S7 11 7 7a5 5 0 0 1 5-5Z"/></svg>Envío a todo el país</div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>Atención directa por WhatsApp</div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Compra 100% segura</div>
+      <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Libro con dedicatoria</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     7. MÉTODO FEIJO — os 4 passos para a prosperidade (do livro)
+     ========================================================================== -->
+<section class="sec method" id="metodo">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">El Método Feijo</span>
+      <h2 class="h-display">4 pasos para <span class="gold">prosperar</span> de verdad</h2>
+      <p>No es motivación de un día. Son los pasos que yo mismo sigo para prosperar, y podés empezar a aplicarlos hoy.</p>
+    </div>
+    <div class="m-grid rv">
+      <div class="m-item"><div class="m-num">01</div><h4>Romper la inercia</h4><p>Dar el primer paso con compromiso total y mantenerte firme, aunque el camino se ponga difícil.</p></div>
+      <div class="m-item"><div class="m-num">02</div><h4>Creer en vos</h4><p>Si ni vos creés en vos, ¿cómo esperás que los demás crean? Eliminá las creencias que te limitan.</p></div>
+      <div class="m-item"><div class="m-num">03</div><h4>Cambiar de actitud</h4><p>Toda transformación empieza con un ajuste de actitud. Cuidarte es un acto de amor.</p></div>
+      <div class="m-item"><div class="m-num">04</div><h4>Repudiar</h4><p>Rechazá todo lo que no suma: los miedos, las excusas y las críticas que frenan tu progreso.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     8. DEPOIMENTOS
+     Os textos são editados em js/config.js (testimonials). Use depoimentos REAIS.
+     ========================================================================== -->
+<!-- ESCONDIDA até ter depoimentos reais: para mostrar, apague o atributo "hidden" abaixo -->
+<section class="sec testi" hidden>
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">Lo que dicen</span>
+      <h2 class="h-display">Personas que <span class="gold">ya aplicaron</span> el método</h2>
+    </div>
+    <div class="t-grid" id="testiGrid"></div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     9. PERGUNTAS FREQUENTES
+     Cada pergunta é um <details>: <summary> = pergunta, <p> = resposta
+     ========================================================================== -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="h-display">Todo lo que necesitás saber</h2>
+    </div>
+    <div class="faq-list rv">
+      <details><summary>¿Cómo funciona la compra?</summary><p>Agregás los productos al carrito y tocás “Finalizar por WhatsApp”. Se abre una conversación con tu pedido ya escrito; el equipo de Feijo te confirma el valor, el medio de pago y el envío.</p></details>
+      <details><summary>¿Qué medios de pago aceptan?</summary><p>Transferencia bancaria, depósito y otros medios que te indicamos por WhatsApp al confirmar el pedido.</p></details>
+      <details><summary>¿Cuánto tarda en llegar el libro?</summary><p>Despachamos dentro de las 48 h hábiles posteriores al pago. El plazo de entrega depende de tu ciudad y te lo informamos al confirmar.</p></details>
+      <details><summary>¿Cómo funciona la mentoría?</summary><p>La CVV Mentoría es una jornada de crecimiento personal, espiritual y financiero con Feijo. Trabajamos tu mente, tu propósito y tus talentos, con ejercicios prácticos y acompañamiento. Al completar la formación, recibís la oportunidad de ser socio de Feijo. Escribinos por WhatsApp y te contamos los detalles y la disponibilidad.</p></details>
+      <details><summary>¿Puedo pedir el libro con dedicatoria?</summary><p>¡Sí! Al finalizar el pedido, escribí en el campo de notas a nombre de quién querés la dedicatoria.</p></details>
+      <details><summary>¿Feijo puede llevar el seminario a mi ciudad?</summary><p>Sí. El Seminario Método Feijo es un evento presencial de inmersión que Feijo lleva a distintas ciudades, y la Feijo Business Academy capacita equipos dentro de tu empresa. Escribinos por WhatsApp con la fecha y la ciudad de tu evento.</p></details>
+      <details><summary>¿Hay precio especial para compras por cantidad?</summary><p>Sí, para empresas, eventos o regalos corporativos hay precios por volumen. Escribinos por WhatsApp.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     10. CHAMADA FINAL
+     ========================================================================== -->
+<section class="final">
+  <div class="wrap rv">
+    <span class="eyebrow">El momento es ahora</span>
+    <h2 class="h-display">No es mañana. <span class="gold">Es ahora.</span></h2>
+    <p>La perfección es una ilusión y el progreso, la única realidad. Las mayores oportunidades no son para quien espera el momento perfecto, sino para quien actúa.</p>
+    <div class="final-ctas">
+      <button class="btn btn-gold" data-add="mentoria">Quiero la mentoría</button>
+      <button class="btn btn-ghost" style="border-color:rgba(255,255,255,.35)" data-add="combo">Combo Libro + Mentoría</button>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     11. MARCAS — o ecossistema de marcas do Feij∞ (final do site)
+     Logos vetorizados (SVG) em img/marcas/ · cor creme já aplicada no arquivo
+     Para tirar uma marca: apague a linha <li> dela · para trocar: substitua o .svg
+     ========================================================================== -->
+<section class="brands" id="marcas">
+  <div class="wrap rv">
+    <div class="sec-head center">
+      <span class="eyebrow">Marcas y proyectos</span>
+      <h2 class="h-display">El ecosistema Feij<span class="inf">∞</span></h2>
+      <p>Empresas, academias y proyectos que nacen del mismo método.</p>
+    </div>
+    <ul class="brand-grid">
+      <li><img src="img/marcas/metodo-feijo.svg" alt="Método Feijo" loading="lazy"></li>
+      <li><img src="img/marcas/feijo-business-academy.svg" alt="Feijo Business Academy" loading="lazy"></li>
+      <li><img src="img/marcas/mf-podcast.svg" alt="MF Podcast" loading="lazy"></li>
+      <li><img src="img/marcas/el-sendero.svg" alt="El Sendero de la Transformación" loading="lazy"></li>
+      <li><img src="img/marcas/ark.svg" alt="ARK Prosperity" loading="lazy"></li>
+      <li><img src="img/marcas/noah.svg" alt="NÖAH" loading="lazy"></li>
+      <li><img src="img/marcas/ecf.svg" alt="ECF" loading="lazy"></li>
+      <li><img src="img/marcas/amf.svg" alt="AMF" loading="lazy"></li>
+      <li><img src="img/marcas/ndw.svg" alt="NDW" loading="lazy"></li>
+      <li><img src="img/marcas/mf.svg" alt="MF" loading="lazy"></li>
+      <li><img src="img/marcas/fco.svg" alt="F.CO" loading="lazy"></li>
+      <li><img src="img/marcas/metodo-vh.svg" alt="Método VH" loading="lazy"></li>
+      <li><img src="img/marcas/g.svg" alt="G" loading="lazy"></li>
+      <li><img src="img/marcas/40.svg" alt="Marca del ecosistema Feijo" loading="lazy"></li>
+      <li><img src="img/marcas/circulo.svg" alt="Marca del ecosistema Feijo" loading="lazy"></li>
+      <li><img src="img/marcas/swirl.svg" alt="Marca del ecosistema Feijo" loading="lazy"></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<!-- ==========================================================================
+     RODAPÉ
+     Link do Instagram e WhatsApp
+     ========================================================================== -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <a href="#top" class="logo"><span class="logo-mark">MF</span><span class="logo-name">Feij<span class="inf">∞</span></span></a>
+      <div class="f-social">
+        <a href="https://www.instagram.com/soyfeijo/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="https://www.youtube.com/@soyfeijo" target="_blank" rel="noopener" aria-label="YouTube · MF Podcast"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.1 24.1 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.1 24.1 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+        <a href="#" data-wa-link aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg></a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="yr"></span> Lucas Reppetto · Todos los derechos reservados.</span>
+      <span>Prosperar es crecer.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ==========================================================================
+     ELEMENTOS FLUTUANTES
+     WhatsApp flutuante, barra de compra (celular), carrinho e aviso
+     ========================================================================== -->
+<!-- Botão flutuante do WhatsApp -->
+<a class="wa-float" href="#" data-wa-link aria-label="Hablar por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3ZM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8Zm8.4-18.2A11.8 11.8 0 0 0 12 .1C5.5.1.2 5.4.2 11.9c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.3Z"/></svg>
+</a>
+
+<!-- Barra de compra fixa (só aparece no celular) -->
+<div class="buybar" id="buybar">
+  <div class="bb-info"><small>La mejor opción</small><b>Libro + Mentoría</b></div>
+  <a class="bb-wa" href="#" data-wa-link aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3ZM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8Zm8.4-18.2A11.8 11.8 0 0 0 12 .1C5.5.1.2 5.4.2 11.9c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.3Z"/></svg></a>
+  <button class="btn btn-ghost" id="bbCart" style="padding:.7rem .9rem;gap:.35rem" aria-label="Abrir carrito"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span id="bbCount">0</span></button>
+  <button class="btn btn-primary" data-add="combo">Lo quiero</button>
+</div>
+
+<!-- Carrinho (gaveta lateral) -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Carrito" aria-hidden="true">
+  <div class="d-head">
+    <h3>Tu carrito</h3>
+    <button class="d-close" id="closeCart" aria-label="Cerrar carrito"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="d-body" id="cartBody"></div>
+  <div class="d-foot" id="cartFoot">
+    <div class="field"><input id="cNombre" placeholder="Tu nombre" autocomplete="name"></div>
+    <div class="field"><input id="cNota" placeholder="Ciudad · dedicatoria · observaciones (opcional)"></div>
+
+    <p class="totals-note">El valor, el pago y el envío te los confirmamos por WhatsApp.</p>
+    <button class="btn btn-wa" id="checkout">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5c-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3ZM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8Zm8.4-18.2A11.8 11.8 0 0 0 12 .1C5.5.1.2 5.4.2 11.9c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.3Z"/></svg>
+      Finalizar compra por WhatsApp
+    </button>
+    <div class="secure"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Atención personalizada · Sin registro</div>
+  </div>
+</aside>
+
+<!-- Aviso "produto adicionado" -->
+<div class="toast" id="toast" role="status" aria-live="polite"><span class="ok">✓</span><span id="toastMsg"></span><button id="toastView">Ver carrito</button></div>
+
+<!-- Configurações (preços, WhatsApp, depoimentos) e funcionamento do site -->
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
